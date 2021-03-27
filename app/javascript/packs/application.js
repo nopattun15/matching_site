@@ -1,6 +1,7 @@
 import 'bootstrap';
 import '../stylesheets/application';
 import '@fortawesome/fontawesome-free/js/all';
+import 'hammerjs';
 
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
@@ -12,6 +13,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "src/profile_image_upload"
+import "src/swipe"
 
 Rails.start()
 Turbolinks.start()
