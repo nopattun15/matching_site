@@ -14,7 +14,10 @@ class ChatRoomsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @chat_room = ChatRoom.find(params[:id])
+    @chat_room_user = @chat_room.chat_room_users.where.not(user_id: current_user.id).first.user_id
+    @user = User.find(@chat_room_user)
+    @chat_messages = ChatMessage.where(chat_room_id: @chat_room)
 
   end
 
